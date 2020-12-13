@@ -1,12 +1,22 @@
 html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #303030;
-  color: #fbfaf5;
+  background-color: #18191a;
+  color: #e4e6eb;
+}
+
+.container {
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #clock {
   text-align: center;
   font-size: 6vw;
-  width: 100%;
-  margin: auto 5px;
+  margin: auto;
+}
+
+.red {
+  color: red;
 }
