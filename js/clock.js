@@ -15,10 +15,6 @@ function time() {
     year--;
     month = 12;
     date = 32;
-
-    if (!clock.classList.contains('red')) {
-      clock.classList.add('red');
-    }
   }
 
   clock.textContent = `${year}-${minTwo(month)}-${minTwo(date)} ${minTwo(hour)}:${minTwo(minute)}:${minTwo(second)}`;
@@ -26,3 +22,7 @@ function time() {
 
 var clock = document.getElementById('clock');
 setInterval(time, 1000);
+
+document.body.addEventListener('click', () => {
+  window.location.href = 'https://youtu.be/dQw4w9WgXcQ';
+});
