@@ -7,9 +7,11 @@
   <title>New Years Clock</title>
 </head>
 <body>
-  <div class="container">
-    <span><p id="clock"></p></span>
+  <div id="clock">
+    <p id="date">{{ date }}</p>
+    <p id="time">{{ time }}</p>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <script src="js/clock.js"></script>
 </body>
 </html>

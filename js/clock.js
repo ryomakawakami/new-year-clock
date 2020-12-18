@@ -1,9 +1,17 @@
-function minTwo(n) {
-    return (n < 10 ? '0' : '') + n;
-}
+var clock = new Vue({
+  el: '#clock',
+  data: {
+      time: '',
+      date: ''
+  }
+});
 
-function time() {
+var week = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+var timerID = setInterval(updateTime, 1000);
+updateTime();
+function updateTime() {
   var day = new Date();
+  var dayOfWeek = day.getDay();
   var year = day.getFullYear();
   var month = day.getMonth() + 1;
   var date = day.getDate();
@@ -17,11 +25,17 @@ function time() {
     date = 32;
   }
 
-  clock.textContent = `${year}-${minTwo(month)}-${minTwo(date)} ${minTwo(hour)}:${minTwo(minute)}:${minTwo(second)}`;
-}
+  clock.time = zeroPadding(hour, 2) + ':' + zeroPadding(minute, 2) + ':' + zeroPadding(second, 2);
+  clock.date = zeroPadding(year, 4) + '-' + zeroPadding(month, 2) + '-' + zeroPadding(date, 2) + ' ' + week[dayOfWeek];
+};
 
-var clock = document.getElementById('clock');
-setInterval(time, 1000);
+function zeroPadding(num, digit) {
+  var zero = '';
+  for(var i = 0; i < digit; i++) {
+      zero += '0';
+  }
+  return (zero + num).slice(-digit);
+}
 
 document.body.addEventListener('click', () => {
   window.location.href = 'https://youtu.be/dQw4w9WgXcQ';

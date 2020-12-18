@@ -1,25 +1,32 @@
 html {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Share Tech Mono', monospace;
   background-color: #18191a;
   color: #e4e6eb;
 }
 
-.container {
-  height: 95vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+p {
+  margin: 0;
+  padding: 0;
 }
 
 #clock {
   text-align: center;
-  font-size: 6vw;
-  margin: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-shadow: 0 0 30px red, 0 0 30px white;
+}
+
+#clock #time {
+  letter-spacing: 0.05em;
+  font-size: 80px;
+  padding: 5px 0;
+}
+
+#clock #date {
+  letter-spacing: 0.1em;
+  font-size: 24px;
 }
 /*# sourceMappingURL=style.css.map */
